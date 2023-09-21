@@ -1,4 +1,4 @@
-import { Box } from "@mui/material"
+import Box from "@mui/material/Box"
 
 const BoardContent = () => {
   return (
@@ -9,7 +9,7 @@ const BoardContent = () => {
         height: (theme) =>
           `calc(100vh - ${theme.trelloCustom.appBarHeight} - ${theme.trelloCustom.boardBarHeight})`,
         display: "flex",
-        alignItems: "center",
+        alignItems: "center"
       }}
     >
       Content
