@@ -1,4 +1,4 @@
-import { Box } from "@mui/material"
+import Box from "@mui/material/Box"
 
 const BoardBar = () => {
   return (
@@ -8,7 +8,7 @@ const BoardBar = () => {
         width: "100%",
         height: (theme) => theme.trelloCustom.boardBarHeight,
         display: "flex",
-        alignItems: "center",
+        alignItems: "center"
       }}
     >
       Board Bar
