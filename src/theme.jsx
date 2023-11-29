@@ -19,6 +19,34 @@ const theme = extendTheme({
       primary: cyan,
       secondary: orange
     }
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          '*::-webkit-scrollbar': {
+            width: '8px',
+            height: '8px'
+          },
+          '*::-webkit-scrollbar-track': {
+            backgroundColor: 'bdc3c7'
+          },
+          '*::-webkit-scrollbar-thumb': {
+            backgroundColor: '#00b894',
+            borderRadius: '5px'
+          }
+
+        }
+      }
+    },
+
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "none"
+        }
+      }
+    }
   }
 })
 export default theme
