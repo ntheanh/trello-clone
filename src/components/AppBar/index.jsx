@@ -48,13 +48,12 @@ const AppBar = () => {
             Trello
           </Typography>
         </Box>
-        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
-          <Workspaces />
-          <Recent />
-          <Starred />
-          <Templates />
-          <Button variant="outlined">Create</Button>
-        </Box>
+        <Workspaces />
+        <Recent />
+        <Starred />
+        <Templates />
+        <Button variant="outlined">Create</Button>
+        <Box></Box>
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
         <TextField id="outlined-search" label="Search" type="search" size="small" sx={{ minWidth: '120px' }} />
