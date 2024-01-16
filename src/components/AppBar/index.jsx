@@ -10,16 +10,16 @@ import Starred from "./Menu/Starred"
 import Templates from "./Menu/Templates"
 import Button from "@mui/material/Button"
 import TextField from "@mui/material/TextField"
-import Badge from '@mui/material/Badge'
-import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined'
+import Badge from "@mui/material/Badge"
+import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined"
 import Tooltip from "@mui/material/Tooltip"
-import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined'
+import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined"
 import Profiles from "./Menu/Profiles"
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline"
 
 const AppBar = () => {
   return (
     <Box
-      px={2}
       sx={{
         width: "100%",
         height: (theme) => theme.trelloCustom.appBarHeight,
@@ -27,7 +27,8 @@ const AppBar = () => {
         alignItems: "center",
         justifyContent: "space-between",
         gap: 2,
-        overflowX: 'auto'
+        paddingX: 2,
+        overflowX: "auto"
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
@@ -52,18 +53,26 @@ const AppBar = () => {
         <Recent />
         <Starred />
         <Templates />
-        <Button variant="outlined">Create</Button>
+        <Button variant="outlined" startIcon={<AddCircleOutlineIcon />}>
+          Create
+        </Button>
         <Box></Box>
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-        <TextField id="outlined-search" label="Search" type="search" size="small" sx={{ minWidth: '120px' }} />
+        <TextField
+          id="outlined-search"
+          label="Search"
+          type="search"
+          size="small"
+          sx={{ minWidth: "120px" }}
+        />
         <ModeSelect />
-        <Tooltip title="Notification" >
+        <Tooltip title="Notification">
           <Badge color="secondary" variant="dot" sx={{ cursor: "pointer" }}>
             <NotificationsOutlinedIcon />
           </Badge>
         </Tooltip>
-        <Tooltip title="Help" >
+        <Tooltip title="Help">
           <HelpOutlineOutlinedIcon sx={{ cursor: "pointer" }} />
         </Tooltip>
         <Profiles />

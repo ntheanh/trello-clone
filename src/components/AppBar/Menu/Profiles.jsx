@@ -3,14 +3,13 @@ import Menu from "@mui/material/Menu"
 import MenuItem from "@mui/material/MenuItem"
 import Divider from "@mui/material/Divider"
 import ListItemIcon from "@mui/material/ListItemIcon"
-import Avatar from '@mui/material/Avatar'
-import IconButton from '@mui/material/IconButton'
-import Tooltip from '@mui/material/Tooltip'
-import PersonAdd from '@mui/icons-material/PersonAdd'
-import Settings from '@mui/icons-material/Settings'
-import Logout from '@mui/icons-material/Logout'
-import { deepOrange } from '@mui/material/colors'
-
+import Avatar from "@mui/material/Avatar"
+import IconButton from "@mui/material/IconButton"
+import Tooltip from "@mui/material/Tooltip"
+import PersonAdd from "@mui/icons-material/PersonAdd"
+import Settings from "@mui/icons-material/Settings"
+import Logout from "@mui/icons-material/Logout"
+import { deepOrange } from "@mui/material/colors"
 
 const Profiles = () => {
   const [anchorEl, setAnchorEl] = useState(null)
@@ -28,11 +27,16 @@ const Profiles = () => {
           onClick={handleClick}
           size="small"
           sx={{ padding: 0 }}
-          aria-controls={open ? 'basic-menu-profiles' : undefined}
+          aria-controls={open ? "basic-menu-profiles" : undefined}
           aria-haspopup="true"
-          aria-expanded={open ? 'true' : undefined}
+          aria-expanded={open ? "true" : undefined}
         >
-          <Avatar sx={{ bgcolor: deepOrange[500], width: 30, height: 30 }} size="small">A</Avatar>
+          <Avatar
+            sx={{ bgcolor: deepOrange[500], width: 30, height: 30 }}
+            size="small"
+          >
+            A
+          </Avatar>
         </IconButton>
       </Tooltip>
 
@@ -46,25 +50,25 @@ const Profiles = () => {
         }}
       >
         <MenuItem>
-          <Avatar sx={{ width: 30, height: 30, mr: 2 }} /> Profile
+          <Avatar sx={{ width: 35, height: 35, mr: 2 }} /> Profile
         </MenuItem>
         <MenuItem>
-          <Avatar sx={{ width: 30, height: 30, mr: 2 }} /> My account
+          <Avatar sx={{ width: 35, height: 35, mr: 2 }} /> My account
         </MenuItem>
         <Divider />
-        <MenuItem >
+        <MenuItem>
           <ListItemIcon>
             <PersonAdd fontSize="small" />
           </ListItemIcon>
           Add another account
         </MenuItem>
-        <MenuItem >
+        <MenuItem>
           <ListItemIcon>
             <Settings fontSize="small" />
           </ListItemIcon>
           Settings
         </MenuItem>
-        <MenuItem >
+        <MenuItem>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
