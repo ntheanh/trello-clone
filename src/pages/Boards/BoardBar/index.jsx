@@ -5,6 +5,12 @@ import VpnLockIcon from "@mui/icons-material/VpnLock"
 import AddToDriveIcon from "@mui/icons-material/AddToDrive"
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt"
 import FilterListIcon from "@mui/icons-material/FilterList"
+import Button from "@mui/material/Button"
+import PersonAddIcon from "@mui/icons-material/PersonAdd"
+import Avatar from "@mui/material/Avatar"
+import AvatarGroup from "@mui/material/AvatarGroup"
+import Tooltip from "@mui/material/Tooltip"
+
 const MENU_STYLES = {
   color: "primary.main",
   bgcolor: "white",
@@ -66,12 +72,26 @@ const BoardBar = () => {
         />
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-        <Chip
-          icon={<FilterListIcon />}
-          label="Filter"
-          clickable
-          sx={MENU_STYLES}
-        />
+        <Button variant="outlined" startIcon={<PersonAddIcon />}>
+          Invite
+        </Button>
+        <AvatarGroup max={4}>
+          <Tooltip title="DelRemy Sharpete">
+            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+          </Tooltip>
+          <Tooltip title="Remy Sharp">
+            <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+          </Tooltip>
+          <Tooltip title="DelRemy Sharpete">
+            <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+          </Tooltip>
+          <Tooltip title="Agnes Walker">
+            <Avatar alt="Agnes Walker" src="/static/images/avatar/4.jpg" />
+          </Tooltip>
+          <Tooltip title="Trevor Henderson">
+            <Avatar alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
+          </Tooltip>
+        </AvatarGroup>
       </Box>
     </Box>
   )
