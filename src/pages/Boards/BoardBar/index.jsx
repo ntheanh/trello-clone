@@ -5,9 +5,16 @@ import VpnLockIcon from "@mui/icons-material/VpnLock"
 import AddToDriveIcon from "@mui/icons-material/AddToDrive"
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt"
 import FilterListIcon from "@mui/icons-material/FilterList"
+import Button from "@mui/material/Button"
+import PersonAddIcon from "@mui/icons-material/PersonAdd"
+import Avatar from "@mui/material/Avatar"
+import AvatarGroup from "@mui/material/AvatarGroup"
+import Tooltip from "@mui/material/Tooltip"
+import Avt from "../../../assets/avt.jpg"
+
 const MENU_STYLES = {
-  color: "primary.main",
-  bgcolor: "white",
+  color: "white",
+  bgcolor: "transparent",
   borderRadius: "5px",
   border: "none",
   paddingX: "5px",
@@ -15,7 +22,7 @@ const MENU_STYLES = {
     bgcolor: "primary.50"
   },
   "& .MuiSvgIcon-root": {
-    color: "primary.main"
+    color: "white"
   }
 }
 
@@ -30,7 +37,9 @@ const BoardBar = () => {
         justifyContent: "space-between",
         overflowX: "auto",
         paddingX: 2,
-        borderTop: "1px solid #00bfa5"
+        bgcolor: (theme) =>
+          theme.palette.mode === "dark" ? "#34495e" : "#1976d2",
+        borderBottom: "1px solid white"
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
@@ -66,12 +75,48 @@ const BoardBar = () => {
         />
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-        <Chip
-          icon={<FilterListIcon />}
-          label="Filter"
-          clickable
-          sx={MENU_STYLES}
-        />
+        <Button
+          sx={{
+            color: "white",
+            borderColor: "white",
+            "&:hover": { borderColor: "white" }
+          }}
+          variant="outlined"
+          startIcon={<PersonAddIcon />}
+        >
+          Invite
+        </Button>
+        <AvatarGroup
+          max={4}
+          sx={{
+            gap: "10px",
+            "& .MuiAvatar-root": {
+              width: 35,
+              height: 35,
+              fontSize: 16,
+              border: "none",
+              color: "white",
+              cursor: "pointer",
+              bgcolor: "#a4b0be"
+            }
+          }}
+        >
+          <Tooltip title="DelRemy Sharpete">
+            <Avatar alt="Remy Sharp" src={Avt} />
+          </Tooltip>
+          <Tooltip title="Remy Sharp">
+            <Avatar alt="Remy Sharp" src={Avt} />
+          </Tooltip>
+          <Tooltip title="DelRemy Sharpete">
+            <Avatar alt="Cindy Baker" src={Avt} />
+          </Tooltip>
+          <Tooltip title="Agnes Walker">
+            <Avatar alt="Agnes Walker" src={Avt} />
+          </Tooltip>
+          <Tooltip title="Trevor Henderson">
+            <Avatar alt="Trevor Henderson" src={Avt} />
+          </Tooltip>
+        </AvatarGroup>
       </Box>
     </Box>
   )
