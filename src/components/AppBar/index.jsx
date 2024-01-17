@@ -15,6 +15,7 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import Tooltip from "@mui/material/Tooltip"
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined"
 import Profiles from "./Menu/Profiles"
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline"
 
 const AppBar = () => {
   return (
@@ -52,7 +53,9 @@ const AppBar = () => {
         <Recent />
         <Starred />
         <Templates />
-        <Button variant="outlined">Create</Button>
+        <Button variant="outlined" startIcon={<AddCircleOutlineIcon />}>
+          Create
+        </Button>
         <Box></Box>
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
