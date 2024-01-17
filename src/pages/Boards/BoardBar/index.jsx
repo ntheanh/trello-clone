@@ -12,8 +12,8 @@ import AvatarGroup from "@mui/material/AvatarGroup"
 import Tooltip from "@mui/material/Tooltip"
 
 const MENU_STYLES = {
-  color: "primary.main",
-  bgcolor: "white",
+  color: "white",
+  bgcolor: "transparent",
   borderRadius: "5px",
   border: "none",
   paddingX: "5px",
@@ -21,7 +21,7 @@ const MENU_STYLES = {
     bgcolor: "primary.50"
   },
   "& .MuiSvgIcon-root": {
-    color: "primary.main"
+    color: "white"
   }
 }
 
@@ -36,7 +36,9 @@ const BoardBar = () => {
         justifyContent: "space-between",
         overflowX: "auto",
         paddingX: 2,
-        borderTop: "1px solid #00bfa5"
+        bgcolor: (theme) =>
+          theme.palette.mode === "dark" ? "#34495e" : "#1976d2",
+        borderBottom: "1px solid white"
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
@@ -72,10 +74,30 @@ const BoardBar = () => {
         />
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-        <Button variant="outlined" startIcon={<PersonAddIcon />}>
+        <Button
+          sx={{
+            color: "white",
+            borderColor: "white",
+            "&:hover": { borderColor: "white" }
+          }}
+          variant="outlined"
+          startIcon={<PersonAddIcon />}
+        >
           Invite
         </Button>
-        <AvatarGroup max={4}>
+        <AvatarGroup
+          max={4}
+          sx={{
+            gap: "10px",
+            "& .MuiAvatar-root": {
+              width: 35,
+              height: 35,
+              fontSize: 16,
+              border: "none"
+            }
+          }}
+        >
+
           <Tooltip title="DelRemy Sharpete">
             <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
           </Tooltip>
