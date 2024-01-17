@@ -21,6 +21,7 @@ import SearchIcon from "@mui/icons-material/Search"
 import CloseIcon from "@mui/icons-material/Close"
 import { useState } from "react"
 
+
 const AppBar = () => {
   const [searchValue, setSearchValue] = useState("")
 
@@ -69,6 +70,7 @@ const AppBar = () => {
         >
           Create
         </Button>
+
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
         <TextField
